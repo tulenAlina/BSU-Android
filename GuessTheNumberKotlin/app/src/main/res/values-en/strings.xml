@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Guess The Number</string>
+    <string name="behind">Too low!</string>
+    <string name="ahead">Too high!</string>
+    <string name="hit">Correct!</string>
+    <string name="input_value">Input value</string>
+    <string name="new_game">Play again</string>
+    <string name="try_to_guess">Try to guess the number (1 - 100)</string>
+    <string name="error">Invalid input</string>
+    <string name="exit">Exit game</string>
+</resources>

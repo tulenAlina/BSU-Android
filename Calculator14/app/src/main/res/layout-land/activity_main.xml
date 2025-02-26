@@ -1,0 +1,145 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/keypadContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:gravity="end"
+            android:background="@android:color/white"
+            android:padding="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="L (Arc Length)"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/editTextA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="A (Angle in Degrees)"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/editTextC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="C (Chord Length)"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/textViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:text="Result will be shown here"/>
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:text="@string/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keypadContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_weight="2"
+        app:layout_constraintStart_toEndOf="@id/inputContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <GridLayout
+            android:id="@+id/keypad"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="4"
+            android:rowCount="5"
+            android:layout_gravity="center"
+            android:useDefaultMargins="true">
+
+            <Button android:id="@+id/button7" android:text="7"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/button8" android:text="8"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/button9" android:text="9"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/buttonDivide" android:text="/"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+
+            <Button android:id="@+id/button4" android:text="4"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/button5" android:text="5"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/button6" android:text="6"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/buttonMultiply" android:text="*"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+
+            <Button android:id="@+id/button1" android:text="1"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/button2" android:text="2"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/button3" android:text="3"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/buttonSubtract" android:text="-"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+
+            <Button android:id="@+id/button0" android:text="0"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/buttonDot" android:text="."
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/buttonEquals" android:text="="
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+            <Button android:id="@+id/buttonAdd" android:text="+"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_rowWeight="1" android:layout_columnWeight="1"/>
+
+            <Button android:id="@+id/buttonClear" android:text="C"
+                android:layout_width="0dp" android:layout_height="0dp"
+                android:layout_columnSpan="4" android:layout_rowWeight="1"/>
+        </GridLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
