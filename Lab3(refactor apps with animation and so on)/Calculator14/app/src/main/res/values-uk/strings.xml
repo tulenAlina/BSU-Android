@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Калькулятор14</string>
+    <string name="calculate">Обчислити</string>
+    <string name="error_divide_by_zero">Помилка: Ділення на нуль</string>
+    <string name="error_invalid_input">Некоректне введення</string>
+    <string name="result">Площа сектора: %.2f</string>
+</resources>

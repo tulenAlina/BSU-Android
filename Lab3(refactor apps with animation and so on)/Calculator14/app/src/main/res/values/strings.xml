@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculator14</string>
+    <string name="calculate">Calculate</string>
+    <string name="error_divide_by_zero">Error: Division by zero</string>
+    <string name="error_invalid_input">Invalid input</string>
+    <string name="result">Sector Area: %.2f</string>
+</resources>
